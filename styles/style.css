@@ -1,0 +1,165 @@
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1000px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+.editor-container {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #2d2d2d;
+    padding: 0;
+}
+
+.CodeMirror {
+    height: auto;
+    min-height: 300px;
+    background: #2d2d2d !important;
+    color: #ffffff !important;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* Màu sắc cho các phần tử trong CodeMirror */
+.cm-s-default span.cm-atom {
+    color: #e5c07b !important; /* Màu cam sáng cho key trước dấu : */
+}
+
+.cm-s-default span.cm-number {
+    color: #d19a66 !important; /* Màu đỏ dịu hơn cho số sau dấu : */
+}
+
+.cm-s-default span.cm-string {
+    color: #98c379 !important; /* Màu xanh lá nhẹ hơn cho chuỗi trong '' */
+}
+
+.cm-s-default span.cm-variable {
+    color: #ffffff !important; /* Màu trắng cho giá trị sau - hoặc sau : */
+}
+
+.controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#validate-button {
+    background-color: #28a745;
+}
+
+#validate-button:hover {
+    background-color: #218838;
+}
+
+#fix-errors-button {
+    background-color: #ffc107;
+    color: black;
+}
+
+#fix-errors-button:hover {
+    background-color: #e0a800;
+}
+
+#download-button {
+    background-color: #17a2b8;
+}
+
+#download-button:hover {
+    background-color: #138496;
+}
+
+#loading-screen {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#error-container {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #ffebee;
+    color: #d32f2f;
+    border-left: 4px solid #d32f2f;
+    display: none;
+    white-space: pre-wrap;
+    font-family: 'Fira Code', monospace;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#success-container {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #e8f5e9;
+    color: #388e3c;
+    border-left: 4px solid #388e3c;
+    display: none;
+    white-space: pre-wrap;
+    font-family: 'Fira Code', monospace;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.hidden {
+    display: none;
+}
+.CodeMirror-cursor {
+    border-left: 2px solid #6bb3f1 !important; /* Màu vàng dịu */
+}
+.error-line {
+    background-color: rgba(255, 0, 0, 0.2) !important;
+}

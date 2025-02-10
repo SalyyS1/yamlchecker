@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAML Checker - Stella Studio</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/yaml/yaml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛠 YAML Checker</h1>
+            <p>Tác giả: <strong>SalyVn - Stella Studio</strong></p>
+        </header>
+
+        <div class="editor-container">
+            <textarea id="yaml-input"></textarea>
+        </div>
+
+        <div class="controls">
+            <input type="file" id="file-upload" accept=".yml,.yaml,.txt,.zip">
+            <button id="validate-button">Nút Bí Mật</button>
+            <button id="fix-errors-button">Sửa lỗi</button>
+            <button id="download-button">Tải về</button>
+        </div>
+
+        <div id="loading-screen" class="hidden">💥 Bí mật là Saly đẹp trai... <span id="countdown">3</span></div>
+        <div id="error-container" class="hidden"></div>
+        <div id="success-container" class="hidden">✅ YAML hợp lệ!</div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
